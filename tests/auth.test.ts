@@ -1,10 +1,10 @@
 import request from "supertest";
 import bcrypt from "bcrypt";
 import app from "../src/app";
-import User from "../src/models/User"; // Import the actual model, which will be mocked
+import User from "../src/models/User";
 import sequelize from "../src/db/init";
 
-jest.mock("../src/models/User"); // Mock the User model
+jest.mock("../src/models/User");
 
 jest.mock("bcrypt", () => ({
   compare: jest.fn((password, hash) => password === "password123"), // Always return true for 'password123'
@@ -18,11 +18,7 @@ describe("Auth API Tests with Mocked DB", () => {
   });
 
   afterAll(async () => {
-    jest.clearAllTimers();
     await sequelize.close();
-
-    // Jest will forcefully exit after closing all open connections
-    // jest.useRealTimers();
   });
 
   describe("POST /signup", () => {
