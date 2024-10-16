@@ -3,14 +3,15 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import User from "../models/User";
 import dotenv from "dotenv";
-import { matchedData, validationResult } from "express-validator";
+import { matchedData } from "express-validator";
 import { ILoginInput, ISignupInput } from "../@types/request-inputs";
 import { asyncHandler } from "../middlewares/async";
+import { myValidationResult } from "../lib/utils";
 
 dotenv.config();
 
 export const login = asyncHandler(async (req: Request, res: Response) => {
-  const result = validationResult(req);
+  const result = myValidationResult(req);
 
   if (!result.isEmpty()) {
     // handle validation errors
@@ -32,7 +33,7 @@ export const login = asyncHandler(async (req: Request, res: Response) => {
 });
 
 export const signup = asyncHandler(async (req: Request, res: Response) => {
-  const result = validationResult(req);
+  const result = myValidationResult(req);
 
   if (!result.isEmpty()) {
     // handle validation errors
