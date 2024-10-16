@@ -1,12 +1,12 @@
 import express from "express";
 import passport from "passport";
 import { body } from "express-validator";
-import { login, signup } from "../controllers/authController";
+import { login, signup, logout } from "../controllers/authController";
 
 const router = express.Router();
 
 router.post(
-  "/login",
+  "/login/password",
   body("email").notEmpty().trim().isEmail(),
   body("password").isString(),
   login
@@ -34,6 +34,12 @@ router.get(
   (req, res) => {
     res.json({ message: "You are authorized!" });
   }
+);
+
+router.post(
+  "/logout",
+  passport.authenticate("jwt", { session: false }),
+  logout
 );
 
 export default router;
