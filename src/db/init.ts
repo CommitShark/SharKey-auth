@@ -6,7 +6,7 @@ dotenv.config();
 let sequelize: Sequelize;
 
 if (process.env.NODE_ENV === "test") {
-  sequelize = new Sequelize("sqlite::memory:");
+  sequelize = new Sequelize("sqlite::memory:", { logging: false });
 } else {
   sequelize = new Sequelize(
     process.env.DB_NAME as string,
