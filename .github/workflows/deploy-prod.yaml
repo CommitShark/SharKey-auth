@@ -22,6 +22,7 @@ jobs:
           echo LOG_LEVEL="info" >> .env
           echo LOG_DISABLED="false" >> .env
           echo JWT_SECRET="your_secret" >> .env
+          echo NODE_ENV="test" >> .env
           cat .env
       - name: Run tests
         run: npm run test
