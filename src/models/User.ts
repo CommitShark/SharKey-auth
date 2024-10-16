@@ -7,8 +7,7 @@ interface UserAttributes {
   password: string;
   firstName: string;
   lastName: string;
-  mfaEnabled?: boolean;
-  mfaSecret?: string | null;
+  tokenVersion: number;
 }
 
 class User extends Model<UserAttributes> implements UserAttributes {
@@ -17,8 +16,7 @@ class User extends Model<UserAttributes> implements UserAttributes {
   public password!: string;
   public firstName!: string;
   public lastName!: string;
-  public mfaEnabled?: boolean;
-  public mfaSecret?: string | null;
+  public tokenVersion!: number;
 }
 
 User.init(
@@ -40,13 +38,9 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    mfaEnabled: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false,
-    },
-    mfaSecret: {
-      type: DataTypes.STRING,
-      allowNull: true,
+    tokenVersion: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0, // Default token version is 0
     },
   },
   {

@@ -44,6 +44,7 @@ describe("Auth API Tests with Mocked DB", () => {
         password: expect.any(String),
         firstName: "Pelumi",
         lastName: "Akinrele",
+        tokenVersion: 0,
       });
     });
 
@@ -74,7 +75,7 @@ describe("Auth API Tests with Mocked DB", () => {
         password: await bcrypt.hash("password123", 10), // Simulate hashed password
       });
 
-      const res = await request(app).post("/login").send({
+      const res = await request(app).post("/login/password").send({
         email: "testlogin@example.com",
         password: "password123",
       });
@@ -87,7 +88,7 @@ describe("Auth API Tests with Mocked DB", () => {
       // Mock findOne to return null (user not found)
       (User.findOne as jest.Mock).mockResolvedValue(null);
 
-      const res = await request(app).post("/login").send({
+      const res = await request(app).post("/login/password").send({
         email: "wrong@example.com",
         password: "incorrect",
       });
