@@ -36,14 +36,18 @@ describe("Auth API Tests with Mocked DB", () => {
 
       const res = await request(app).post("/signup").send({
         email: "test@example.com",
-        password: "password123",
+        password: "Password123@",
+        firstName: "Pelumi",
+        lastName: "Akinrele",
       });
 
       expect(res.status).toBe(200);
       expect(res.body).toHaveProperty("email", "test@example.com");
       expect(User.create).toHaveBeenCalledWith({
         email: "test@example.com",
-        password: expect.any(String), // Ensure password is hashed
+        password: expect.any(String),
+        firstName: "Pelumi",
+        lastName: "Akinrele",
       });
     });
 
@@ -56,7 +60,9 @@ describe("Auth API Tests with Mocked DB", () => {
 
       const res = await request(app).post("/signup").send({
         email: "test@example.com",
-        password: "password123",
+        password: "Password123@",
+        firstName: "Pelumi",
+        lastName: "Akinrele",
       });
 
       expect(res.status).toBe(400); // Expecting a failure due to duplicate email

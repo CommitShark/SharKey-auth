@@ -1,0 +1,16 @@
+{"level":"info","message":"POST \"/signup\" 200 \"Referer -\" - 8.476 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:08:29.244Z"}
+{"level":"info","message":"POST \"/signup\" 200 \"Referer -\" - 4.325 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:08:29.299Z"}
+{"level":"info","message":"POST \"/login\" 200 \"Referer -\" - 6.369 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:08:29.373Z"}
+{"level":"info","message":"POST \"/login\" 401 \"Referer -\" - 2.205 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:08:29.402Z"}
+{"level":"info","message":"POST \"/signup\" 200 \"Referer -\" - 8.988 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:10:40.468Z"}
+{"level":"info","message":"POST \"/signup\" 200 \"Referer -\" - 3.884 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:10:40.526Z"}
+{"level":"info","message":"POST \"/login\" 200 \"Referer -\" - 7.644 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:10:40.596Z"}
+{"level":"info","message":"POST \"/login\" 401 \"Referer -\" - 1.874 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:10:40.626Z"}
+{"level":"info","message":"POST \"/signup\" 200 \"Referer -\" - 10.394 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:12:35.592Z"}
+{"level":"info","message":"POST \"/signup\" 200 \"Referer -\" - 3.636 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:12:35.652Z"}
+{"level":"info","message":"POST \"/login\" 200 \"Referer -\" - 5.595 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:12:35.721Z"}
+{"level":"info","message":"POST \"/login\" 401 \"Referer -\" - 2.480 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:12:35.752Z"}
+{"level":"info","message":"POST \"/signup\" 200 \"Referer -\" - 9.662 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:14:01.078Z"}
+{"level":"info","message":"POST \"/signup\" 400 \"Referer -\" - 3.102 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:14:01.125Z"}
+{"level":"info","message":"POST \"/login\" 200 \"Referer -\" - 6.734 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:14:01.194Z"}
+{"level":"info","message":"POST \"/login\" 401 \"Referer -\" - 1.192 ms - (remote ::ffff:127.0.0.1)","service":"test-order-app","timestamp":"2024-10-16T17:14:01.219Z"}
